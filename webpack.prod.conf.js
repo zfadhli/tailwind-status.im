@@ -104,6 +104,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'index.html',
       filename: 'index.html',
+      hash: true,
       inject: true,
       minify: {
         removeComments: true,
@@ -121,9 +122,9 @@ module.exports = {
       parallel: true
     }),
     new OptimizeCSSPlugin({
-      cssProcessorOptions: true
-        ? { safe: true, map: { inline: false } }
-        : { safe: true }
+      cssProcessorOptions: {
+        safe: true
+      }
     }),
     new CopyWebpackPlugin([
       {
