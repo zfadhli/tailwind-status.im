@@ -207,7 +207,7 @@ module.exports = {
       // 'Helvetica Neue',
       // 'sans-serif',
 
-      'Open Sans',
+      'Rubik',
       'sans-serif'
     ],
     'serif': [
