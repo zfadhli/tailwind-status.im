@@ -1,0 +1,10 @@
+@tailwind preflight;
+body {
+  @apply .font-sans .antialiased .leading-normal .text-grey-darkest
+}
+
+a {
+  @apply .no-underline .text-grey-darkest .font-semibold
+}
+
+@tailwind utilities;
