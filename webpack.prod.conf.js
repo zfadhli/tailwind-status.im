@@ -7,8 +7,8 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const CompressionWebpackPlugin = require('compression-webpack-plugin')
-const glob = require("glob-all");
-const PurgecssPlugin = require("purgecss-webpack-plugin");
+const glob = require('glob-all');
+const PurgecssPlugin = require('purgecss-webpack-plugin');
 
 function resolve(dir) {
   return path.join(__dirname, '..', dir)
@@ -32,7 +32,7 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader"
+          loader: 'babel-loader'
         }
       },
       {
@@ -118,7 +118,7 @@ module.exports = {
           warnings: false
         }
       },
-      sourceMap: true,
+      sourceMap: false,
       parallel: true
     }),
     new OptimizeCSSPlugin({
@@ -142,7 +142,7 @@ module.exports = {
       extractors: [
         {
           extractor: TailwindExtractor,
-          extensions: ["html", "js", "vue"]
+          extensions: ['html', 'js', 'vue']
         }
       ]
     }),
